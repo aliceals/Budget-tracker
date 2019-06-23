@@ -1,116 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+            />
 
-    <title>Budget Tracker</title>
-  </head>
-  <body>
-    <h1>Budget Tracker</h1>
-    <form>
-      <h3>Weekly Income:</h3>
-      <div class ="form-group row">
-          <label for="salary" class="col-sm-2 col-form-label">Salary: </label>
-          <div class="col-sm-2"><input type="number" class="form-control" id="inputSalary" placeholder="e.g $80,000" /><br /></div></div>
-    <div class="form-group row">
-        <label for="salary2" class="col-sm-2 col-form-label">Salary2: </label>
-        <div class="col-sm-2"><input type="number" class="form-control" id="inputSalary2" placeholder="e.g $80,000" /><br /></div>
-    </div>
-    <div class="form-group row">
-        <label for="other" class="col-sm-2 col-form-label">Other: </label>
-        <div class="col-sm-2"><input type="number" class="form-control" id="inputOther" placeholder="e.g investments" /><br /></div>
-    </div>
-      
-      <h3>Weekly Expenses:</h3>
+        <title>Budget Tracker</title>
+    </head>
+    <body>
+        <h1>Budget Tracker</h1>
+        <form>
+            <h3>Weekly Income:</h3>
+            <div class="form-group">
+                <div class="row">
+                    <label for="salary" class="col-sm-2 col-form-label">Salary:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputSalary" placeholder="e.g 80,000" /></div>
+                </div>
+                <div class="row">
+                    <label for="salary2" class="col-sm-2 col-form-label">Salary2:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputSalary2" placeholder="e.g 80,000" /></div>
+                </div>
+                <div class="row">
+                    <label for="other" class="col-sm-2 col-form-label">Other:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputOther" placeholder="e.g investments" /></div>
+                </div>
+            </div>
 
-<div class="form-group row">
-    <label for="mortgage" class="col-sm-2 col-form-label">Mortgage/rent: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputMortgage" placeholder="e.g $500" /><br /></div>
-</div>
-<div class="form-group row">
-    <label for="insurance" class="col-sm-2 col-form-label">Insurance: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputInsurance" placeholder="car/content etc" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="rates" class="col-sm-2 col-form-label">Rates: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputRates"
-            placeholder="Rates" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="power/gas" class="col-sm-2 col-form-label">Power/gas: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputGas" placeholder="power/gas" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="interet" class="col-sm-2 col-form-label">Internet: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputInternet" placeholder="internet" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="transportation" class="col-sm-2 col-form-label">Transportation: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputTransportation" placeholder="e.g petrol & trains" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="childcare" class="col-sm-2 col-form-label">Childcare: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputChildcare"
-            placeholder="e.g daycare" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="groceries" class="col-sm-2 col-form-label">Groceries: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputGroceries"
-            placeholder="e.g food" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="activities" class="col-sm-2 col-form-label">Activities: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputActivities" placeholder="e.g fun & games" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="maintenance" class="col-sm-2 col-form-label">Maintenance: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputMaintenance"
-            placeholder="e.g home maintenance" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="phone" class="col-sm-2 col-form-label">Phone: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputPhone"
-            placeholder="e.g phone bills" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="pocket-money" class="col-sm-2 col-form-label">Pocket Money: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputPocketMoney"
-            placeholder="e.g individual savings" /><br />
-    </div>
-</div>
-<div class="form-group row">
-    <label for="kids" class="col-sm-2 col-form-label">Kids expenses: </label>
-    <div class="col-sm-2"><input type="number" class="form-control" id="inputKids"
-            placeholder="e.g swim lessons/clothes" /><br />
-    </div>
-</div>
+            <h3>Weekly Expenses:</h3>
 
-     
-      <input type="submit" value="Submit" />
+            <div class="form-group">
+                <div class="row">
+                    <label for="mortgage" class="col-sm-2 col-form-label">Mortgage/rent:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputMortgage" placeholder="e.g 500" /></div>
+                </div>
+                <div class="row">
+                    <label for="insurance" class="col-sm-2 col-form-label">Insurance:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputInsurance" placeholder="car/content etc" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="rates" class="col-sm-2 col-form-label">Rates:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputRates"
+                            placeholder="Rates" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="power/gas" class="col-sm-2 col-form-label">Power/gas:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputGas" placeholder="power/gas" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="interet" class="col-sm-2 col-form-label">Internet:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputInternet" placeholder="internet" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="transportation" class="col-sm-2 col-form-label">Transportation:
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="number"
+                            class="form-control"
+                            id="inputTransportation"
+                            placeholder="e.g petrol/trains/bus" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="childcare" class="col-sm-2 col-form-label">Childcare:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputChildcare"
+                            placeholder="e.g daycare" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="groceries" class="col-sm-2 col-form-label">Groceries:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputGroceries"
+                            placeholder="e.g food" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="activities" class="col-sm-2 col-form-label">Activities:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputActivities" placeholder="e.g fun & games"
+                            />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="maintenance" class="col-sm-2 col-form-label">Maintenance:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputMaintenance"
+                            placeholder="e.g home maintenance" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="phone" class="col-sm-2 col-form-label">Phone:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputPhone"
+                            placeholder="e.g phone bills" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="pocket-money" class="col-sm-2 col-form-label">Pocket
+                        Money: </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputPocketMoney"
+                            placeholder="e.g individual savings" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="kids" class="col-sm-2 col-form-label">Kids
+                        expenses:
+                    </label>
+                    <div class="col-sm-4"><input type="number"
+                            class="form-control"
+                            id="inputKids"
+                            placeholder="e.g swim lessons/clothes" />
+                    </div>
+                </div>
+            </div>
 
-      <h3>Total:</h3>
-      Total: <input type="text" name="total" /><br />
+
+            <input type="submit" value="Submit" />
+
+            <h3>Total:</h3>
+            <div class="row">
+                Total: <input type="text" name="total" />
+            </div>
 
 
 
-  </body>
-</html>
+        </body>
+    </html>
