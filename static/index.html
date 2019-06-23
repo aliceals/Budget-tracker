@@ -16,7 +16,7 @@
     </head>
     <body>
         <h1>Budget Tracker</h1>
-        <form>
+        <form onsubmit="myFunction()">
             <h3>Weekly Income:</h3>
             <div class="form-group">
                 <div class="row">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <label for="interet" class="col-sm-2 col-form-label">Internet:
+                    <label for="internet" class="col-sm-2 col-form-label">Internet:
                     </label>
                     <div class="col-sm-4"><input type="number"
                             class="form-control"
@@ -163,13 +163,14 @@
 
 
             <input type="submit" value="Submit" />
+        </form>
 
-            <h3>Total:</h3>
-            <div class="row">
-                Total: <input type="text" name="total" />
-            </div>
+        <h3>Total:</h3>
+        <div class="row">
+            Total: <input type="text" id="total" />
+        </div>
 
+        <script src="app.js"></script>
 
-
-        </body>
-    </html>
+    </body>
+</html>
