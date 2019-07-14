@@ -5,7 +5,7 @@ const port = 3000;
 app.get("/", (req, res) => res.send("Hello World!"));
 
 app.post("/calculatetax", function(req, res) {
-  res.send("POST request to the homepage");
+  res.send({ weeklyPaye: 1000 });
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
