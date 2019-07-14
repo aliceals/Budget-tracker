@@ -7,8 +7,13 @@ const port = 3000;
 app.get("/", (req, res) => res.send("Hello World!"));
 
 app.post("/calculatetax", function(req, res) {
-  res.send({ weeklyPaye: 1000 });
-  console.log(req.body);
+  const salary = req.body.salary;
+  const taxCode = req.body.taxCode;
+  console.log(salary);
+  console.log(taxCode);
+  const taxOff = (salary * 0.3) / 52;
+  console.log(taxOff);
+  res.send({ weeklyPaye: taxOff });
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
