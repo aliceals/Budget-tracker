@@ -20,11 +20,22 @@
             <h3>Weekly Income:</h3>
             <div class="form-group">
                 <div class="row">
-                    <label for="salary" class="col-sm-2 col-form-label">Salary:
+                    <label for="grossSalary" class="col-sm-2 col-form-label">Input
+                        yearly gross salary:
+                    </label>
+                    <div class="col-sm-4">
+                        <input type="number" oninput="apiFetch()"
+                            class="form-control"
+                            id="inputGrossSalary" placeholder="e.g 80,000" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="salary" class="col-sm-2 col-form-label">Weekly
+                        Salary:
                     </label>
                     <div class="col-sm-4"><input type="number"
-                            class="form-control"
-                            id="inputSalary" placeholder="e.g 80,000" /></div>
+                            class="form-control" id="inputSalary"
+                            placeholder="e.g 80,000" /></div>
                 </div>
                 <div class="row">
                     <label for="salary2" class="col-sm-2 col-form-label">Salary2:

@@ -4,9 +4,15 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.use("/app.js", express.static(__dirname + "/static/app.js"));
 
-app.post("/calculatetax", function(req, res) {
+app.use("/styles.css", express.static(__dirname + "/static/styles.css"));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/static/index.html");
+});
+
+app.post("/api/calculatetax", function(req, res) {
   const salary = req.body.salary;
   const taxCode = req.body.taxCode;
   console.log(salary);

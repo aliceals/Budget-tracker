@@ -16,6 +16,7 @@ var phone = document.getElementById("inputPhone");
 var pocketMoney = document.getElementById("inputPocketMoney");
 var kids = document.getElementById("inputKids");
 var total = document.getElementById("total");
+var grossSalary = document.getElementById("inputGrossSalary");
 
 function myFunction(e) {
   event.preventDefault();
@@ -41,4 +42,18 @@ function myFunction(e) {
   var totalOfBoth = income - expenses;
 
   return (total.value = totalOfBoth);
+}
+
+function apiFetch() {
+  console.log(grossSalary.valueAsNumber);
+  fetch("/api/calculatetax", {
+    method: "POST"
+  })
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      var taxOff = json.taxOff;
+      console.log(taxOff);
+    });
 }
