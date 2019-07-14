@@ -23,8 +23,6 @@ function myFunction(e) {
   var income =
     salary.valueAsNumber + salary2.valueAsNumber + other.valueAsNumber;
 
-  console.log(event);
-
   var expenses =
     mortgage.valueAsNumber +
     insurance.valueAsNumber +
@@ -41,8 +39,6 @@ function myFunction(e) {
     kids.valueAsNumber;
 
   var totalOfBoth = income - expenses;
-
-  console.log(totalOfBoth);
 
   return (total.value = totalOfBoth);
 }
