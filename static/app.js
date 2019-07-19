@@ -61,7 +61,8 @@ function apiFetch() {
       var weeklyPaye = json.weeklyPaye;
       console.log(weeklyPaye);
       console.log(netWeeklySalary);
-      netWeeklySalary.value = weeklyPaye;
+      netWeeklySalary.value = Math.round(weeklyPaye);
+
       //set input
     });
 }
