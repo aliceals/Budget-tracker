@@ -1,4 +1,4 @@
-var salary = document.getElementById("inputSalary");
+var netWeeklySalary = document.getElementById("netWeeklySalary");
 var grossSalary = document.getElementById("inputGrossSalary");
 var salary2 = document.getElementById("inputSalary2");
 var other = document.getElementById("inputOther");
@@ -23,7 +23,7 @@ function myFunction(e) {
   event.preventDefault();
 
   var income =
-    salary.valueAsNumber + salary2.valueAsNumber + other.valueAsNumber;
+    netWeeklySalary.valueAsNumber + salary2.valueAsNumber + other.valueAsNumber;
 
   var expenses =
     mortgage.valueAsNumber +
@@ -58,8 +58,10 @@ function apiFetch() {
       return response.json();
     })
     .then(json => {
-      var taxOff = json.taxOff;
-      console.log(taxOff);
+      var weeklyPaye = json.weeklyPaye;
+      console.log(weeklyPaye);
+      console.log(netWeeklySalary);
+      netWeeklySalary.value = weeklyPaye;
       //set input
     });
 }
