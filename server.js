@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/api/calculatetax", function(req, res) {
+  console.log(req.body);
   const salary = req.body.salary;
   const taxCode = req.body.taxCode;
   console.log(salary);
@@ -23,9 +24,3 @@ app.post("/api/calculatetax", function(req, res) {
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-//post
-//Post (url, request body, response body)
-//POST /gettax
-//req body = {salary:100,000, taxCode: M}
-//response body = {weeklyPaye: $1000}

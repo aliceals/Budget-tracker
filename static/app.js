@@ -1,4 +1,5 @@
 var salary = document.getElementById("inputSalary");
+var grossSalary = document.getElementById("inputGrossSalary");
 var salary2 = document.getElementById("inputSalary2");
 var other = document.getElementById("inputOther");
 
@@ -45,9 +46,13 @@ function myFunction(e) {
 }
 
 function apiFetch() {
-  console.log(grossSalary.valueAsNumber);
   fetch("/api/calculatetax", {
-    method: "POST"
+    //include body of json object that the server expects (stringify)
+    method: "POST",
+    body: JSON.stringify({ salary: grossSalary.valueAsNumber, taxCode: "M" }),
+    headers: {
+      "Content-Type": "application/json"
+    }
   })
     .then(response => {
       return response.json();
@@ -55,5 +60,6 @@ function apiFetch() {
     .then(json => {
       var taxOff = json.taxOff;
       console.log(taxOff);
+      //set input
     });
 }
