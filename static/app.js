@@ -1,6 +1,6 @@
 var netWeeklySalary = document.getElementById("netWeeklySalary");
 var grossSalary = document.getElementById("inputGrossSalary");
-var salary2 = document.getElementById("inputSalary2");
+var netWeeklySalary2 = document.getElementById("netWeeklySalary2");
 var other = document.getElementById("inputOther");
 
 var mortgage = document.getElementById("inputMortgage");
@@ -23,7 +23,9 @@ function myFunction(e) {
   event.preventDefault();
 
   var income =
-    netWeeklySalary.valueAsNumber + salary2.valueAsNumber + other.valueAsNumber;
+    netWeeklySalary.valueAsNumber +
+    netWeeklySalary2.valueAsNumber +
+    other.valueAsNumber;
 
   var expenses =
     mortgage.valueAsNumber +
