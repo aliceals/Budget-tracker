@@ -13,11 +13,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/api/calculatetax", function(req, res) {
-  console.log(req.body);
   const salary = req.body.salary;
   const taxCode = req.body.taxCode;
-  console.log(salary);
-  console.log(taxCode);
 
   if (taxCode === "M") {
     const taxOff = (salary * 0.2) / 52;
@@ -28,7 +25,7 @@ app.post("/api/calculatetax", function(req, res) {
   }
 
   // const taxOff = (salary * 0.3) / 52;
-  // console.log(taxOff);
+
   // res.send({ weeklyPaye: taxOff });
 });
 

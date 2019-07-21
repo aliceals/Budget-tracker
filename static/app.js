@@ -19,6 +19,7 @@ var kids = document.getElementById("inputKids");
 var total = document.getElementById("total");
 var grossSalary2 = document.getElementById("inputGrossSalary2");
 var selectedTaxCode = document.getElementById("taxCode");
+var selectedTaxCode2 = document.getElementById("taxCode2");
 
 function myFunction(e) {
   event.preventDefault();
@@ -49,20 +50,20 @@ function myFunction(e) {
 }
 
 function calculateA() {
-  apiFetch(grossSalary.value, netWeeklySalary);
+  apiFetch(grossSalary.value, selectedTaxCode, netWeeklySalary);
 }
 
 function calculateB() {
-  apiFetch(grossSalary2.value, netWeeklySalary2);
+  apiFetch(grossSalary2.value, selectedTaxCode2, netWeeklySalary2);
 }
 
-function apiFetch(grossSalary, inputToChange) {
-  console.log("STC", selectedTaxCode.value);
+function apiFetch(grossSalary, taxCodeToChange, inputToChange) {
+  //console.log("STC", selectedTaxCode.value);
   fetch("/api/calculatetax", {
     method: "POST",
     body: JSON.stringify({
       salary: grossSalary,
-      taxCode: selectedTaxCode.value
+      taxCode: taxCodeToChange.value
     }),
     headers: {
       "Content-Type": "application/json"
