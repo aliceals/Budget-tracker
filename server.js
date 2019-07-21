@@ -18,9 +18,18 @@ app.post("/api/calculatetax", function(req, res) {
   const taxCode = req.body.taxCode;
   console.log(salary);
   console.log(taxCode);
-  const taxOff = (salary * 0.3) / 52;
-  console.log(taxOff);
-  res.send({ weeklyPaye: taxOff });
+
+  if (taxCode === "M") {
+    const taxOff = (salary * 0.2) / 52;
+    res.send({ weeklyPaye: taxOff });
+  } else if (taxCode === "MS") {
+    const taxOff = (salary * 0.3) / 52;
+    res.send({ weeklyPaye: taxOff });
+  }
+
+  // const taxOff = (salary * 0.3) / 52;
+  // console.log(taxOff);
+  // res.send({ weeklyPaye: taxOff });
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
