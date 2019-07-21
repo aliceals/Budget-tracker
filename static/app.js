@@ -17,7 +17,7 @@ var phone = document.getElementById("inputPhone");
 var pocketMoney = document.getElementById("inputPocketMoney");
 var kids = document.getElementById("inputKids");
 var total = document.getElementById("total");
-var grossSalary = document.getElementById("inputGrossSalary");
+var grossSalary2 = document.getElementById("inputGrossSalary2");
 
 function myFunction(e) {
   event.preventDefault();
@@ -47,11 +47,18 @@ function myFunction(e) {
   return (total.value = totalOfBoth);
 }
 
-function apiFetch() {
+function calculateA() {
+  apiFetch(grossSalary.value, netWeeklySalary);
+}
+
+function calculateB() {
+  apiFetch(grossSalary2.value, netWeeklySalary2);
+}
+
+function apiFetch(grossSalary, inputToChange) {
   fetch("/api/calculatetax", {
-    //include body of json object that the server expects (stringify)
     method: "POST",
-    body: JSON.stringify({ salary: grossSalary.valueAsNumber, taxCode: "M" }),
+    body: JSON.stringify({ salary: grossSalary, taxCode: "M" }),
     headers: {
       "Content-Type": "application/json"
     }
@@ -63,8 +70,6 @@ function apiFetch() {
       var weeklyPaye = json.weeklyPaye;
       console.log(weeklyPaye);
       console.log(netWeeklySalary);
-      netWeeklySalary.value = Math.round(weeklyPaye);
-
-      //set input
+      inputToChange.value = Math.round(weeklyPaye);
     });
 }
