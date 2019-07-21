@@ -18,6 +18,7 @@ var pocketMoney = document.getElementById("inputPocketMoney");
 var kids = document.getElementById("inputKids");
 var total = document.getElementById("total");
 var grossSalary2 = document.getElementById("inputGrossSalary2");
+var selectedTaxCode = document.getElementById("taxCode");
 
 function myFunction(e) {
   event.preventDefault();
@@ -56,9 +57,13 @@ function calculateB() {
 }
 
 function apiFetch(grossSalary, inputToChange) {
+  console.log("STC", selectedTaxCode.value);
   fetch("/api/calculatetax", {
     method: "POST",
-    body: JSON.stringify({ salary: grossSalary, taxCode: "M" }),
+    body: JSON.stringify({
+      salary: grossSalary,
+      taxCode: selectedTaxCode.value
+    }),
     headers: {
       "Content-Type": "application/json"
     }
