@@ -25,24 +25,26 @@ function myFunction(e) {
   event.preventDefault();
 
   var income =
-    netWeeklySalary.valueAsNumber +
-    netWeeklySalary2.valueAsNumber +
-    other.valueAsNumber;
+    netWeeklySalary.valueAsNumber ||
+    0 + netWeeklySalary2.valueAsNumber ||
+    0 + other.valueAsNumber ||
+    0;
 
   var expenses =
-    mortgage.valueAsNumber +
-    insurance.valueAsNumber +
-    rates.valueAsNumber +
-    gas.valueAsNumber +
-    internet.valueAsNumber +
-    transportation.valueAsNumber +
-    childcare.valueAsNumber +
-    groceries.valueAsNumber +
-    activities.valueAsNumber +
-    maintenance.valueAsNumber +
-    phone.valueAsNumber +
-    pocketMoney.valueAsNumber +
-    kids.valueAsNumber;
+    mortgage.valueAsNumber ||
+    0 + insurance.valueAsNumber ||
+    0 + rates.valueAsNumber ||
+    0 + gas.valueAsNumber ||
+    0 + internet.valueAsNumber ||
+    0 + transportation.valueAsNumber ||
+    0 + childcare.valueAsNumber ||
+    0 + groceries.valueAsNumber ||
+    0 + activities.valueAsNumber ||
+    0 + maintenance.valueAsNumber ||
+    0 + phone.valueAsNumber ||
+    0 + pocketMoney.valueAsNumber ||
+    0 + kids.valueAsNumber ||
+    0;
 
   var totalOfBoth = income - expenses;
 
