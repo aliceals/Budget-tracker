@@ -25,26 +25,24 @@ function myFunction(e) {
   event.preventDefault();
 
   var income =
-    netWeeklySalary.valueAsNumber ||
-    0 + netWeeklySalary2.valueAsNumber ||
-    0 + other.valueAsNumber ||
-    0;
+    (netWeeklySalary.valueAsNumber || 0) +
+    (netWeeklySalary2.valueAsNumber || 0) +
+    (other.valueAsNumber || 0);
 
   var expenses =
-    mortgage.valueAsNumber ||
-    0 + insurance.valueAsNumber ||
-    0 + rates.valueAsNumber ||
-    0 + gas.valueAsNumber ||
-    0 + internet.valueAsNumber ||
-    0 + transportation.valueAsNumber ||
-    0 + childcare.valueAsNumber ||
-    0 + groceries.valueAsNumber ||
-    0 + activities.valueAsNumber ||
-    0 + maintenance.valueAsNumber ||
-    0 + phone.valueAsNumber ||
-    0 + pocketMoney.valueAsNumber ||
-    0 + kids.valueAsNumber ||
-    0;
+    (mortgage.valueAsNumber || 0) +
+    (insurance.valueAsNumber || 0) +
+    (rates.valueAsNumber || 0) +
+    (gas.valueAsNumber || 0) +
+    (internet.valueAsNumber || 0) +
+    (transportation.valueAsNumber || 0) +
+    (childcare.valueAsNumber || 0) +
+    (groceries.valueAsNumber || 0) +
+    (activities.valueAsNumber || 0) +
+    (maintenance.valueAsNumber || 0) +
+    (phone.valueAsNumber || 0) +
+    (pocketMoney.valueAsNumber || 0) +
+    (kids.valueAsNumber || 0);
 
   var totalOfBoth = income - expenses;
 
