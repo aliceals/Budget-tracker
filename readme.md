@@ -11,3 +11,6 @@ CSS and JavaScript
 Again this is another project which I have looked
 back after Dev Academy and it showed me how far I have
 come in such a short space of time
+
+## To Do
+- style
